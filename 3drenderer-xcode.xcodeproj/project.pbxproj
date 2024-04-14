@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2230D4762BCC81620015BC14 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2230D4752BCC81620015BC14 /* main.c */; };
+		2230D4792BCC817A0015BC14 /* mesh.c in Sources */ = {isa = PBXBuildFile; fileRef = 2230D4772BCC817A0015BC14 /* mesh.c */; };
+		2230D4CA2BCC82A30015BC14 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2230D4C92BCC82A30015BC14 /* SDL2.framework */; };
+		2230D4CB2BCC82A30015BC14 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2230D4C92BCC82A30015BC14 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2230D4692BCC80E70015BC14 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		2230D4CC2BCC82A30015BC14 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2230D4CB2BCC82A30015BC14 /* SDL2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2230D46B2BCC80E70015BC14 /* 3drenderer-xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "3drenderer-xcode"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2230D4752BCC81620015BC14 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
+		2230D4772BCC817A0015BC14 /* mesh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mesh.c; path = src/mesh.c; sourceTree = "<group>"; };
+		2230D4782BCC817A0015BC14 /* mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mesh.h; path = src/mesh.h; sourceTree = "<group>"; };
+		2230D47B2BCC82190015BC14 /* SDL_misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_misc.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_misc.h; sourceTree = "<group>"; };
+		2230D47C2BCC82190015BC14 /* SDL_egl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_egl.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_egl.h; sourceTree = "<group>"; };
+		2230D47D2BCC82190015BC14 /* SDL_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_system.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_system.h; sourceTree = "<group>"; };
+		2230D47E2BCC82190015BC14 /* SDL_thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_thread.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_thread.h; sourceTree = "<group>"; };
+		2230D47F2BCC82190015BC14 /* SDL_opengles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles.h; sourceTree = "<group>"; };
+		2230D4802BCC82190015BC14 /* SDL_audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_audio.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_audio.h; sourceTree = "<group>"; };
+		2230D4812BCC82190015BC14 /* SDL_haptic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_haptic.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_haptic.h; sourceTree = "<group>"; };
+		2230D4822BCC82190015BC14 /* SDL_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_types.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_types.h; sourceTree = "<group>"; };
+		2230D4832BCC82190015BC14 /* close_code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = close_code.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/close_code.h; sourceTree = "<group>"; };
+		2230D4842BCC82190015BC14 /* SDL_atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_atomic.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_atomic.h; sourceTree = "<group>"; };
+		2230D4852BCC82190015BC14 /* SDL_hints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_hints.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_hints.h; sourceTree = "<group>"; };
+		2230D4862BCC82190015BC14 /* SDL_gesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_gesture.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_gesture.h; sourceTree = "<group>"; };
+		2230D4872BCC82190015BC14 /* SDL_gamecontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_gamecontroller.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_gamecontroller.h; sourceTree = "<group>"; };
+		2230D4882BCC82190015BC14 /* SDL_shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_shape.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_shape.h; sourceTree = "<group>"; };
+		2230D4892BCC82190015BC14 /* SDL_mouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_mouse.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_mouse.h; sourceTree = "<group>"; };
+		2230D48A2BCC82190015BC14 /* SDL_opengles2_gl2platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles2_gl2platform.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles2_gl2platform.h; sourceTree = "<group>"; };
+		2230D48B2BCC82190015BC14 /* SDL_test_random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_random.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_random.h; sourceTree = "<group>"; };
+		2230D48C2BCC82190015BC14 /* SDL_clipboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_clipboard.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_clipboard.h; sourceTree = "<group>"; };
+		2230D48D2BCC82190015BC14 /* SDL_rwops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_rwops.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_rwops.h; sourceTree = "<group>"; };
+		2230D48E2BCC82190015BC14 /* SDL_pixels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_pixels.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_pixels.h; sourceTree = "<group>"; };
+		2230D48F2BCC82190015BC14 /* SDL_sensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_sensor.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_sensor.h; sourceTree = "<group>"; };
+		2230D4902BCC82190015BC14 /* begin_code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = begin_code.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/begin_code.h; sourceTree = "<group>"; };
+		2230D4912BCC82190015BC14 /* SDL_test_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_common.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_common.h; sourceTree = "<group>"; };
+		2230D4922BCC82190015BC14 /* SDL_render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_render.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_render.h; sourceTree = "<group>"; };
+		2230D4932BCC82190015BC14 /* SDL_messagebox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_messagebox.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_messagebox.h; sourceTree = "<group>"; };
+		2230D4942BCC82190015BC14 /* SDL_mutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_mutex.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_mutex.h; sourceTree = "<group>"; };
+		2230D4952BCC82190015BC14 /* SDL_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test.h; sourceTree = "<group>"; };
+		2230D4962BCC82190015BC14 /* SDL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL.h; sourceTree = "<group>"; };
+		2230D4972BCC82190015BC14 /* SDL_test_font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_font.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_font.h; sourceTree = "<group>"; };
+		2230D4982BCC82190015BC14 /* SDL_opengles2_khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles2_khrplatform.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles2_khrplatform.h; sourceTree = "<group>"; };
+		2230D4992BCC82190015BC14 /* SDL_syswm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_syswm.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_syswm.h; sourceTree = "<group>"; };
+		2230D49A2BCC82190015BC14 /* SDL_keycode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_keycode.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_keycode.h; sourceTree = "<group>"; };
+		2230D49B2BCC82190015BC14 /* SDL_endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_endian.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_endian.h; sourceTree = "<group>"; };
+		2230D49C2BCC82190015BC14 /* SDL_log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_log.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_log.h; sourceTree = "<group>"; };
+		2230D49D2BCC82190015BC14 /* SDL_stdinc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_stdinc.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_stdinc.h; sourceTree = "<group>"; };
+		2230D49E2BCC82190015BC14 /* SDL_cpuinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_cpuinfo.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_cpuinfo.h; sourceTree = "<group>"; };
+		2230D49F2BCC82190015BC14 /* SDL_vulkan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_vulkan.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_vulkan.h; sourceTree = "<group>"; };
+		2230D4A02BCC82190015BC14 /* SDL_hidapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_hidapi.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_hidapi.h; sourceTree = "<group>"; };
+		2230D4A12BCC82190015BC14 /* SDL_test_md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_md5.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_md5.h; sourceTree = "<group>"; };
+		2230D4A22BCC82190015BC14 /* SDL_keyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_keyboard.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_keyboard.h; sourceTree = "<group>"; };
+		2230D4A32BCC82190015BC14 /* SDL_loadso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_loadso.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_loadso.h; sourceTree = "<group>"; };
+		2230D4A42BCC82190015BC14 /* SDL_platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_platform.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_platform.h; sourceTree = "<group>"; };
+		2230D4A52BCC82190015BC14 /* SDL_guid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_guid.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_guid.h; sourceTree = "<group>"; };
+		2230D4A62BCC82190015BC14 /* SDL_scancode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_scancode.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_scancode.h; sourceTree = "<group>"; };
+		2230D4A72BCC82190015BC14 /* SDL_test_images.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_images.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_images.h; sourceTree = "<group>"; };
+		2230D4A82BCC82190015BC14 /* SDL_test_assert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_assert.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_assert.h; sourceTree = "<group>"; };
+		2230D4A92BCC82190015BC14 /* SDL_bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_bits.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_bits.h; sourceTree = "<group>"; };
+		2230D4AA2BCC82190015BC14 /* SDL_main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_main.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_main.h; sourceTree = "<group>"; };
+		2230D4AB2BCC82190015BC14 /* SDL_version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_version.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_version.h; sourceTree = "<group>"; };
+		2230D4AC2BCC82190015BC14 /* SDL_opengles2_gl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles2_gl2.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles2_gl2.h; sourceTree = "<group>"; };
+		2230D4AD2BCC82190015BC14 /* SDL_test_crc32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_crc32.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_crc32.h; sourceTree = "<group>"; };
+		2230D4AE2BCC82190015BC14 /* SDL_opengles2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles2.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles2.h; sourceTree = "<group>"; };
+		2230D4AF2BCC82190015BC14 /* SDL_test_fuzzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_fuzzer.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_fuzzer.h; sourceTree = "<group>"; };
+		2230D4B02BCC82190015BC14 /* SDL_test_harness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_harness.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_harness.h; sourceTree = "<group>"; };
+		2230D4B12BCC82190015BC14 /* SDL_events.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_events.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_events.h; sourceTree = "<group>"; };
+		2230D4B22BCC82190015BC14 /* SDL_rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_rect.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_rect.h; sourceTree = "<group>"; };
+		2230D4B32BCC82190015BC14 /* SDL_joystick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_joystick.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_joystick.h; sourceTree = "<group>"; };
+		2230D4B42BCC82190015BC14 /* SDL_revision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_revision.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_revision.h; sourceTree = "<group>"; };
+		2230D4B52BCC82190015BC14 /* SDL_surface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_surface.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_surface.h; sourceTree = "<group>"; };
+		2230D4B62BCC82190015BC14 /* SDL_opengl_glext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengl_glext.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengl_glext.h; sourceTree = "<group>"; };
+		2230D4B72BCC82190015BC14 /* SDL_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_config.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_config.h; sourceTree = "<group>"; };
+		2230D4B82BCC82190015BC14 /* SDL_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_error.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_error.h; sourceTree = "<group>"; };
+		2230D4B92BCC82190015BC14 /* SDL_locale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_locale.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_locale.h; sourceTree = "<group>"; };
+		2230D4BA2BCC82190015BC14 /* SDL_blendmode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_blendmode.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_blendmode.h; sourceTree = "<group>"; };
+		2230D4BB2BCC82190015BC14 /* SDL_test_compare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_compare.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_compare.h; sourceTree = "<group>"; };
+		2230D4BC2BCC82190015BC14 /* SDL_timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_timer.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_timer.h; sourceTree = "<group>"; };
+		2230D4BD2BCC82190015BC14 /* SDL_video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_video.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_video.h; sourceTree = "<group>"; };
+		2230D4BE2BCC82190015BC14 /* SDL_metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_metal.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_metal.h; sourceTree = "<group>"; };
+		2230D4BF2BCC82190015BC14 /* SDL_opengles2_gl2ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengles2_gl2ext.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengles2_gl2ext.h; sourceTree = "<group>"; };
+		2230D4C02BCC82190015BC14 /* SDL_assert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_assert.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_assert.h; sourceTree = "<group>"; };
+		2230D4C12BCC82190015BC14 /* SDL_filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_filesystem.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_filesystem.h; sourceTree = "<group>"; };
+		2230D4C22BCC82190015BC14 /* SDL_power.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_power.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_power.h; sourceTree = "<group>"; };
+		2230D4C32BCC82190015BC14 /* SDL_test_log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_log.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_log.h; sourceTree = "<group>"; };
+		2230D4C42BCC82190015BC14 /* SDL_quit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_quit.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_quit.h; sourceTree = "<group>"; };
+		2230D4C52BCC82190015BC14 /* SDL_touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_touch.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_touch.h; sourceTree = "<group>"; };
+		2230D4C62BCC82190015BC14 /* SDL_test_memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_test_memory.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_test_memory.h; sourceTree = "<group>"; };
+		2230D4C72BCC82190015BC14 /* SDL_opengl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_opengl.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_opengl.h; sourceTree = "<group>"; };
+		2230D4C82BCC82190015BC14 /* SDL_name.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDL_name.h; path = ../../../../../opt/homebrew/Cellar/sdl2/2.30.2/include/SDL2/SDL_name.h; sourceTree = "<group>"; };
+		2230D4C92BCC82A30015BC14 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2230D4682BCC80E70015BC14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2230D4CA2BCC82A30015BC14 /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2230D4622BCC80E70015BC14 = {
+			isa = PBXGroup;
+			children = (
+				2230D4772BCC817A0015BC14 /* mesh.c */,
+				2230D4782BCC817A0015BC14 /* mesh.h */,
+				2230D4752BCC81620015BC14 /* main.c */,
+				2230D46C2BCC80E70015BC14 /* Products */,
+				2230D47A2BCC82190015BC14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2230D46C2BCC80E70015BC14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2230D46B2BCC80E70015BC14 /* 3drenderer-xcode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2230D47A2BCC82190015BC14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2230D4C92BCC82A30015BC14 /* SDL2.framework */,
+				2230D4902BCC82190015BC14 /* begin_code.h */,
+				2230D4832BCC82190015BC14 /* close_code.h */,
+				2230D4C02BCC82190015BC14 /* SDL_assert.h */,
+				2230D4842BCC82190015BC14 /* SDL_atomic.h */,
+				2230D4802BCC82190015BC14 /* SDL_audio.h */,
+				2230D4A92BCC82190015BC14 /* SDL_bits.h */,
+				2230D4BA2BCC82190015BC14 /* SDL_blendmode.h */,
+				2230D48C2BCC82190015BC14 /* SDL_clipboard.h */,
+				2230D4B72BCC82190015BC14 /* SDL_config.h */,
+				2230D49E2BCC82190015BC14 /* SDL_cpuinfo.h */,
+				2230D47C2BCC82190015BC14 /* SDL_egl.h */,
+				2230D49B2BCC82190015BC14 /* SDL_endian.h */,
+				2230D4B82BCC82190015BC14 /* SDL_error.h */,
+				2230D4B12BCC82190015BC14 /* SDL_events.h */,
+				2230D4C12BCC82190015BC14 /* SDL_filesystem.h */,
+				2230D4872BCC82190015BC14 /* SDL_gamecontroller.h */,
+				2230D4862BCC82190015BC14 /* SDL_gesture.h */,
+				2230D4A52BCC82190015BC14 /* SDL_guid.h */,
+				2230D4812BCC82190015BC14 /* SDL_haptic.h */,
+				2230D4A02BCC82190015BC14 /* SDL_hidapi.h */,
+				2230D4852BCC82190015BC14 /* SDL_hints.h */,
+				2230D4B32BCC82190015BC14 /* SDL_joystick.h */,
+				2230D4A22BCC82190015BC14 /* SDL_keyboard.h */,
+				2230D49A2BCC82190015BC14 /* SDL_keycode.h */,
+				2230D4A32BCC82190015BC14 /* SDL_loadso.h */,
+				2230D4B92BCC82190015BC14 /* SDL_locale.h */,
+				2230D49C2BCC82190015BC14 /* SDL_log.h */,
+				2230D4AA2BCC82190015BC14 /* SDL_main.h */,
+				2230D4932BCC82190015BC14 /* SDL_messagebox.h */,
+				2230D4BE2BCC82190015BC14 /* SDL_metal.h */,
+				2230D47B2BCC82190015BC14 /* SDL_misc.h */,
+				2230D4892BCC82190015BC14 /* SDL_mouse.h */,
+				2230D4942BCC82190015BC14 /* SDL_mutex.h */,
+				2230D4C82BCC82190015BC14 /* SDL_name.h */,
+				2230D4B62BCC82190015BC14 /* SDL_opengl_glext.h */,
+				2230D4C72BCC82190015BC14 /* SDL_opengl.h */,
+				2230D47F2BCC82190015BC14 /* SDL_opengles.h */,
+				2230D4AC2BCC82190015BC14 /* SDL_opengles2_gl2.h */,
+				2230D4BF2BCC82190015BC14 /* SDL_opengles2_gl2ext.h */,
+				2230D48A2BCC82190015BC14 /* SDL_opengles2_gl2platform.h */,
+				2230D4982BCC82190015BC14 /* SDL_opengles2_khrplatform.h */,
+				2230D4AE2BCC82190015BC14 /* SDL_opengles2.h */,
+				2230D48E2BCC82190015BC14 /* SDL_pixels.h */,
+				2230D4A42BCC82190015BC14 /* SDL_platform.h */,
+				2230D4C22BCC82190015BC14 /* SDL_power.h */,
+				2230D4C42BCC82190015BC14 /* SDL_quit.h */,
+				2230D4B22BCC82190015BC14 /* SDL_rect.h */,
+				2230D4922BCC82190015BC14 /* SDL_render.h */,
+				2230D4B42BCC82190015BC14 /* SDL_revision.h */,
+				2230D48D2BCC82190015BC14 /* SDL_rwops.h */,
+				2230D4A62BCC82190015BC14 /* SDL_scancode.h */,
+				2230D48F2BCC82190015BC14 /* SDL_sensor.h */,
+				2230D4882BCC82190015BC14 /* SDL_shape.h */,
+				2230D49D2BCC82190015BC14 /* SDL_stdinc.h */,
+				2230D4B52BCC82190015BC14 /* SDL_surface.h */,
+				2230D47D2BCC82190015BC14 /* SDL_system.h */,
+				2230D4992BCC82190015BC14 /* SDL_syswm.h */,
+				2230D4A82BCC82190015BC14 /* SDL_test_assert.h */,
+				2230D4912BCC82190015BC14 /* SDL_test_common.h */,
+				2230D4BB2BCC82190015BC14 /* SDL_test_compare.h */,
+				2230D4AD2BCC82190015BC14 /* SDL_test_crc32.h */,
+				2230D4972BCC82190015BC14 /* SDL_test_font.h */,
+				2230D4AF2BCC82190015BC14 /* SDL_test_fuzzer.h */,
+				2230D4B02BCC82190015BC14 /* SDL_test_harness.h */,
+				2230D4A72BCC82190015BC14 /* SDL_test_images.h */,
+				2230D4C32BCC82190015BC14 /* SDL_test_log.h */,
+				2230D4A12BCC82190015BC14 /* SDL_test_md5.h */,
+				2230D4C62BCC82190015BC14 /* SDL_test_memory.h */,
+				2230D48B2BCC82190015BC14 /* SDL_test_random.h */,
+				2230D4952BCC82190015BC14 /* SDL_test.h */,
+				2230D47E2BCC82190015BC14 /* SDL_thread.h */,
+				2230D4BC2BCC82190015BC14 /* SDL_timer.h */,
+				2230D4C52BCC82190015BC14 /* SDL_touch.h */,
+				2230D4822BCC82190015BC14 /* SDL_types.h */,
+				2230D4AB2BCC82190015BC14 /* SDL_version.h */,
+				2230D4BD2BCC82190015BC14 /* SDL_video.h */,
+				2230D49F2BCC82190015BC14 /* SDL_vulkan.h */,
+				2230D4962BCC82190015BC14 /* SDL.h */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2230D46A2BCC80E70015BC14 /* 3drenderer-xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2230D4722BCC80E70015BC14 /* Build configuration list for PBXNativeTarget "3drenderer-xcode" */;
+			buildPhases = (
+				2230D4672BCC80E70015BC14 /* Sources */,
+				2230D4682BCC80E70015BC14 /* Frameworks */,
+				2230D4692BCC80E70015BC14 /* CopyFiles */,
+				2230D4CC2BCC82A30015BC14 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3drenderer-xcode";
+			productName = "3drenderer-xcode";
+			productReference = 2230D46B2BCC80E70015BC14 /* 3drenderer-xcode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2230D4632BCC80E70015BC14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2230D46A2BCC80E70015BC14 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 2230D4662BCC80E70015BC14 /* Build configuration list for PBXProject "3drenderer-xcode" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2230D4622BCC80E70015BC14;
+			productRefGroup = 2230D46C2BCC80E70015BC14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2230D46A2BCC80E70015BC14 /* 3drenderer-xcode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2230D4672BCC80E70015BC14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2230D4762BCC81620015BC14 /* main.c in Sources */,
+				2230D4792BCC817A0015BC14 /* mesh.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2230D4702BCC80E70015BC14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2230D4712BCC80E70015BC14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2230D4732BCC80E70015BC14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496VN6RNLY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2230D4742BCC80E70015BC14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 496VN6RNLY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2230D4662BCC80E70015BC14 /* Build configuration list for PBXProject "3drenderer-xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2230D4702BCC80E70015BC14 /* Debug */,
+				2230D4712BCC80E70015BC14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2230D4722BCC80E70015BC14 /* Build configuration list for PBXNativeTarget "3drenderer-xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2230D4732BCC80E70015BC14 /* Debug */,
+				2230D4742BCC80E70015BC14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2230D4632BCC80E70015BC14 /* Project object */;
+}
