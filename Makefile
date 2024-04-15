@@ -1,6 +1,6 @@
 
 build:
-	gcc -Wall -std=c99 ./src/*.c -o renderer -I /opt/homebrew/cellar/sdl2/2.30.2/include -L /opt/homebrew/cellar/sdl2/2.30.2/lib -l SDL2
+	gcc -Wall -std=c99 ./src/*.c  -I/opt/homebrew/include -L/opt/homebrew/lib -lSDL2 -o renderer
 
 run:
 	./renderer
