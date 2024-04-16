@@ -20,7 +20,6 @@ bool initialize_window(void) {
         return false;
     }
 
-
     SDL_DisplayMode display_mode;
     SDL_GetCurrentDisplayMode(0, &display_mode);
 
@@ -34,7 +33,7 @@ bool initialize_window(void) {
             window_width,
             window_height,
             SDL_WINDOW_BORDERLESS
-            );
+    );
     if (!window) {
         fprintf(stderr, "Error creating SDL window.\n");
         return false;
@@ -45,6 +44,8 @@ bool initialize_window(void) {
         fprintf(stderr, "Error creating SDL renderer.\n");
         return false;
     }
+
+    //SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 
     return true;
 }
@@ -69,6 +70,16 @@ void setup(void) {
     printf("created color_buffer_texture\n");
 }
 
+void draw_grid(uint32_t color) {
+    for (int y = 0; y < window_height; y++) {
+        for (int x = 0; x < window_width; x++) {
+            if (x % 10 == 0 || y % 10 == 0) {
+                color_buffer[(window_width * y) + x] = color;
+            }
+        }
+    }
+}
+
 void process_input(void) {
     SDL_Event event;
     SDL_PollEvent(&event);
@@ -80,6 +91,12 @@ void process_input(void) {
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE)
                 is_running = false;
+            if (event.key.keysym.sym == SDLK_UP)
+                draw_grid(0xFF00FF00);
+            if (event.key.keysym.sym == SDLK_DOWN)
+                draw_grid(0xFFFF0000);
+            if (event.key.keysym.sym == SDLK_LEFT)
+                draw_grid(0xFF0000FF);
             break;
         default:
             break;
@@ -107,12 +124,13 @@ void clear_color_buffer(uint32_t color) {
     }
 }
 
+
 void render(void) {
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderClear(renderer);
 
     render_color_buffer();
-    clear_color_buffer(0xFFFFFF00);
+    //clear_color_buffer(0xFFFFFF00);
 
     SDL_RenderPresent(renderer);
 }
