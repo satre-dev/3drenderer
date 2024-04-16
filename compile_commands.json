@@ -1,0 +1,32 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-std=c99",
+      "-I/opt/homebrew/include",
+      "-o",
+      "renderer",
+      "./src/main.c"
+    ],
+    "directory": "/Users/sam/Documents/GitHub/3drenderer",
+    "file": "/Users/sam/Documents/GitHub/3drenderer/src/main.c",
+    "output": "/Users/sam/Documents/GitHub/3drenderer/renderer"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-std=c99",
+      "-I/opt/homebrew/include",
+      "-o",
+      "renderer",
+      "./src/mesh.c"
+    ],
+    "directory": "/Users/sam/Documents/GitHub/3drenderer",
+    "file": "/Users/sam/Documents/GitHub/3drenderer/src/mesh.c",
+    "output": "/Users/sam/Documents/GitHub/3drenderer/renderer"
+  }
+]

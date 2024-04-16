@@ -14,32 +14,38 @@ SDL_Texture* color_buffer_texture = NULL;
 int window_width = 800;
 int window_height = 600;
 
-
 bool initialize_window(void) {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         fprintf(stderr, "Error initializing SDL.\n");
         return false;
     }
-    
+
+
+    SDL_DisplayMode display_mode;
+    SDL_GetCurrentDisplayMode(0, &display_mode);
+
+    window_width = display_mode.w;    
+    window_height = display_mode.h;
+
     window = SDL_CreateWindow(
-      NULL,
-      SDL_WINDOWPOS_CENTERED,
-      SDL_WINDOWPOS_CENTERED,
-      window_width,
-      window_height,
-      SDL_WINDOW_BORDERLESS
-    );
+            NULL,
+            SDL_WINDOWPOS_CENTERED,
+            SDL_WINDOWPOS_CENTERED,
+            window_width,
+            window_height,
+            SDL_WINDOW_BORDERLESS
+            );
     if (!window) {
         fprintf(stderr, "Error creating SDL window.\n");
         return false;
     }
-    
+
     renderer = SDL_CreateRenderer(window, -1, 0);
     if (!renderer) {
         fprintf(stderr, "Error creating SDL renderer.\n");
         return false;
     }
-    
+
     return true;
 }
 
@@ -50,24 +56,23 @@ void setup(void) {
         fprintf(stderr, "Error allocating memory for color_buffer in setup\n");
     }
     printf("successfully allocated memory for color_buffer\n");
-    // color_buffer[(window_width * 10) + 20] = 0xFFFF0000;
-    
-   
+
+
     // Creating a SDL texture that is used to display the color buffer 
     color_buffer_texture = SDL_CreateTexture(
-        renderer,
-        SDL_PIXELFORMAT_ARGB8888,
-        SDL_TEXTUREACCESS_STREAMING,
-        window_width,
-        window_height
-    );
+            renderer,
+            SDL_PIXELFORMAT_ARGB8888,
+            SDL_TEXTUREACCESS_STREAMING,
+            window_width,
+            window_height
+            );
     printf("created color_buffer_texture\n");
 }
 
 void process_input(void) {
     SDL_Event event;
     SDL_PollEvent(&event);
-    
+
     switch (event.type) {
         case SDL_QUIT:
             is_running = false;
@@ -83,16 +88,16 @@ void process_input(void) {
 
 void render_color_buffer(void) {
     SDL_UpdateTexture(
-        color_buffer_texture,
-        NULL,
-        color_buffer,
-        (int)(window_width * sizeof(uint32_t))
-    );
+            color_buffer_texture,
+            NULL,
+            color_buffer,
+            (int)(window_width * sizeof(uint32_t))
+            );
     SDL_RenderCopy(renderer, color_buffer_texture, NULL, NULL);
- }
+}
 
 void update(void) {
-   // TODO:
+    // TODO:
     return;
 }
 
@@ -119,11 +124,11 @@ void destroy_window(){
     SDL_Quit();
     printf("finished destroying resources\n");
 }
- 
+
 int main(void) {
     /* TODO: Create a SDL window */
     is_running = initialize_window();
-    
+
     setup();
     printf("setup complete\n");
     while(is_running){
