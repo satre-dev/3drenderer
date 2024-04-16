@@ -45,7 +45,7 @@ bool initialize_window(void) {
         return false;
     }
 
-    //SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+    SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 
     return true;
 }
@@ -73,7 +73,7 @@ void setup(void) {
 void draw_grid(uint32_t color) {
     for (int y = 0; y < window_height; y++) {
         for (int x = 0; x < window_width; x++) {
-            if (x % 10 == 0 || y % 10 == 0) {
+            if (x % 20 == 0 || y % 20 == 0) {
                 color_buffer[(window_width * y) + x] = color;
             }
         }
@@ -91,12 +91,6 @@ void process_input(void) {
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE)
                 is_running = false;
-            if (event.key.keysym.sym == SDLK_UP)
-                draw_grid(0xFF00FF00);
-            if (event.key.keysym.sym == SDLK_DOWN)
-                draw_grid(0xFFFF0000);
-            if (event.key.keysym.sym == SDLK_LEFT)
-                draw_grid(0xFF0000FF);
             break;
         default:
             break;
@@ -129,8 +123,9 @@ void render(void) {
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderClear(renderer);
 
+    draw_grid(0x0F039BD0);
     render_color_buffer();
-    //clear_color_buffer(0xFFFFFF00);
+    clear_color_buffer(0xFF000000);
 
     SDL_RenderPresent(renderer);
 }
@@ -144,7 +139,6 @@ void destroy_window(){
 }
 
 int main(void) {
-    /* TODO: Create a SDL window */
     is_running = initialize_window();
 
     setup();
