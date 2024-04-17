@@ -38,8 +38,6 @@ void process_input(void) {
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE)
                 is_running = false;
-            if (event.key.keysym.sym == SDLK_r)
-                draw_rectangle(300, 500, 500, 200, 0xFFFF0000);
             break;
         default:
             break;
@@ -57,8 +55,11 @@ void render(void) {
     SDL_RenderClear(renderer);
 
     draw_grid();
+    draw_rectangle(300, 500, 500, 200, 0xFFFF0000);
+    draw_pixel(20, 20, 0xFFFFFF00);
+
     render_color_buffer();
-    //clear_color_buffer(0xFF000000);
+    clear_color_buffer(0xFF000000);
 
     SDL_RenderPresent(renderer);
 }

@@ -53,6 +53,12 @@ void destroy_window(){
     printf("finished destroying resources\n");
 }
 
+void draw_pixel(int x, int y, uint32_t color) {
+    if(x < window_width && y < window_height) {
+        color_buffer[(window_width * y) + x] = color;
+    }
+}
+
 void draw_rectangle(int x, int y, int width, int height, uint32_t color){
     for (int dx = x; dx < (x + width); dx++) {
         for(int dy = y; dy < (y + height); dy++) {
