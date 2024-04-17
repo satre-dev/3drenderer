@@ -72,11 +72,9 @@ void setup(void) {
 }
 
 void draw_grid(void) {
-    for (int y = 0; y < window_height; y++) {
-        for (int x = 0; x < window_width; x++) {
-            if (x % 10 == 0 || y % 10 == 0) {
-                color_buffer[(window_width * y) + x] = 0xFF333333;
-            }
+    for (int y = 0; y < window_height; y+=10) {
+        for (int x = 0; x < window_width; x+=10) {
+            color_buffer[(window_width * y) + x] = 0xFF333333;
         }
     }
 }
