@@ -11,6 +11,7 @@ SDL_Renderer* renderer = NULL;
 uint32_t* color_buffer = NULL;
 SDL_Texture* color_buffer_texture = NULL;
 
+
 int window_width = 800;
 int window_height = 600;
 
@@ -70,11 +71,11 @@ void setup(void) {
     printf("created color_buffer_texture\n");
 }
 
-void draw_grid(uint32_t color) {
+void draw_grid(void) {
     for (int y = 0; y < window_height; y++) {
         for (int x = 0; x < window_width; x++) {
-            if (x % 20 == 0 || y % 20 == 0) {
-                color_buffer[(window_width * y) + x] = color;
+            if (x % 10 == 0 || y % 10 == 0) {
+                color_buffer[(window_width * y) + x] = 0xFF333333;
             }
         }
     }
@@ -123,7 +124,7 @@ void render(void) {
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderClear(renderer);
 
-    draw_grid(0x0F039BD0);
+    draw_grid();
     render_color_buffer();
     clear_color_buffer(0xFF000000);
 
