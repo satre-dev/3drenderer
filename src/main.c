@@ -6,6 +6,8 @@
 #include "display.h"
 #include "vector.h"
 
+const int N_POINTS = 9 * 9 * 9;
+vec3_t cube_points[N_POINTS]; // 9x9x9 cube
 
 bool is_running = false;
 
@@ -24,6 +26,19 @@ void setup(void) {
             window_width,
             window_height
             );
+    int point_count = 0;
+
+    // start loading my array of vectors
+    // from -1 to 1 (in 9x9x9 cube)
+ 
+    for (float x = -1; x <= 1; x+= 0.25) {
+        for (float y = -1; y <=1; y+= 0.25) {
+            for (float z = -1; y <= z; z+= 0.25) {
+                vec3_t new_point = {x, y, z};
+                cube_points[point_count++] = new_point;
+            }
+        }
+    }
 }
 
 void process_input(void) {
@@ -68,7 +83,6 @@ int main(void) {
 
     setup();
 
-    vec3_t myvector = {2.0, 3.0, 1.5};
 
     while(is_running){
         process_input();
