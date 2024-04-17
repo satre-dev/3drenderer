@@ -4,6 +4,8 @@
 #include <SDL2/SDL.h>
 
 #include "display.h"
+#include "vector.h"
+
 
 bool is_running = false;
 
@@ -13,8 +15,6 @@ void setup(void) {
     if (color_buffer == NULL) {
         fprintf(stderr, "Error allocating memory for color_buffer in setup\n");
     }
-    printf("successfully allocated memory for color_buffer\n");
-
 
     // Creating a SDL texture that is used to display the color buffer 
     color_buffer_texture = SDL_CreateTexture(
@@ -24,7 +24,6 @@ void setup(void) {
             window_width,
             window_height
             );
-    printf("created color_buffer_texture\n");
 }
 
 void process_input(void) {
@@ -68,7 +67,9 @@ int main(void) {
     is_running = initialize_window();
 
     setup();
-    printf("setup complete\n");
+
+    vec3_t myvector = {2.0, 3.0, 1.5};
+
     while(is_running){
         process_input();
         update();
