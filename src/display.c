@@ -46,7 +46,7 @@ bool initialize_window(void) {
         return false;
     }
 
-    SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+    // SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 
     return true;
 }
@@ -64,7 +64,7 @@ void destroy_window(){
 // draw_pixel: takes x, y as cartesian coordinates in a 2D plane to populate color_buffer entry 
 // as value of arg `color`.
 void draw_pixel(int x, int y, uint32_t color) {
-    if(x < window_width && y < window_height) {
+    if(x >=0 && x < window_width && y >= 0 && y < window_height) {
         color_buffer[(window_width * y) + x] = color;
     }
 }
@@ -73,9 +73,11 @@ void draw_pixel(int x, int y, uint32_t color) {
 // and draws rectangle from left-to-right and bottom-to-top populating each entry in color_buffer with value of
 // argument `color`.
 void draw_rectangle(int x, int y, int width, int height, uint32_t color){
-    for (int dx = x; dx < (x + width); dx++) {
-        for(int dy = y; dy < (y + height); dy++) {
-            color_buffer[(window_width * dy) + dx] = color;
+    for (int i = 0; i <  width; i++) {
+        for(int j = 0; j <  height; j++) {
+            int current_x = x + i;
+            int current_y = y + j;
+            draw_pixel(current_x, current_y, color);
         }
     }
 }
@@ -84,7 +86,7 @@ void draw_rectangle(int x, int y, int width, int height, uint32_t color){
 void draw_grid(void) {
     for (int y = 0; y < window_height; y+=10) {
         for (int x = 0; x < window_width; x+=10) {
-            color_buffer[(window_width * y) + x] = 0xFF333333;
+            draw_pixel(x, y, 0xFF333333);
         }
     }
 }
