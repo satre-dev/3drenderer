@@ -98,7 +98,7 @@ void render(void) {
         );
     }
     render_color_buffer();
-    // clear_color_buffer(0xFF000000);
+    clear_color_buffer(0xFF000000);
 
     SDL_RenderPresent(renderer);
 }
