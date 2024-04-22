@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <SDL2/SDL.h>
 
 #include "display.h"
@@ -74,11 +75,15 @@ vec2_t project(vec3_t point) {
     };
 
     return projected_point;
-};
+}
 
 void update(void) {
+    int time_to_wait = FRAME_TARGET_TIME - (SDL_GetTicks() - previous_frame_time);
+
     // lock processing until the moment frame target time we want arrives
-    while(!SDL_TICKS_PASSED(SDL_GetTicks(), previous_frame_time + FRAME_TARGET_TIME)); 
+    if (time_to_wait > 0 && time_to_wait <= FRAME_TARGET_TIME) {
+        SDL_Delay(time_to_wait);
+    }
 
     previous_frame_time = SDL_GetTicks();
 
@@ -128,7 +133,6 @@ int main(void) {
     is_running = initialize_window();
 
     setup();
-
 
     while(is_running){
         process_input();
