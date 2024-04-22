@@ -6,15 +6,19 @@
 #include <stdbool.h>
 #include <SDL2/SDL.h>
 
+
+#define FPS 30
+#define FRAME_TARGET_TIME (1000 / FPS)
+
 ///////////////////////////////////////
 /// Variables and global declaration
 ///////////////////////////////////////
-SDL_Window* window;
-SDL_Renderer* renderer;
-uint32_t* color_buffer;
-SDL_Texture* color_buffer_texture;
-int window_width;
-int window_height;
+extern SDL_Window* window;
+extern SDL_Renderer* renderer;
+extern uint32_t* color_buffer;
+extern SDL_Texture* color_buffer_texture;
+extern int window_width;
+extern int window_height;
 
 ///////////////////////////////////////
 /// Function prototypes
