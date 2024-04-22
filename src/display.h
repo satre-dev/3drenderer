@@ -31,4 +31,4 @@ void render_color_buffer(void);
 void clear_color_buffer(uint32_t color);
 void destroy_window(void);
 
-#endif
+#endif //DISPLAY_H
