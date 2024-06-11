@@ -37,7 +37,8 @@ void setup(void) {
     );
 
     // loads the cube values in the mesh data structure
-    load_cube_mesh_data();
+    // load_cube_mesh_data();
+    load_obj_file_data("./assets/f22.obj");
 }
 
 void process_input(void) {
