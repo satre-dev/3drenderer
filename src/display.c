@@ -54,7 +54,6 @@ bool initialize_window(void) {
 
 // destroy_window: frees memory consumed by color_buffer, renderer and window.
 void destroy_window(){
-    free(color_buffer);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
