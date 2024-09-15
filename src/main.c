@@ -39,6 +39,18 @@ void setup(void) {
     // loads the cube values in the mesh data structure
     // load_cube_mesh_data();
     load_obj_file_data("./assets/f22.obj");
+    vec3_t a = {
+	    .x = 0.2,
+	    .y = 1.3,
+	    .z = 7.1
+      };
+    vec3_t b = {
+	    .x = 8.2,
+	    .y = 3.2,
+	    .z = 2.2
+      };
+    vec3_t result = vec3_sub(a, b);
+    printf("result= %f,%f,%f", result.x, result.y, result.z);
 }
 
 void process_input(void) {
