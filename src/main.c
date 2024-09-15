@@ -58,7 +58,6 @@ void process_input(void) {
     }
 }
 
-
 // project: receives a 3d vector and returns a projected 2d point
 vec2_t project(vec3_t point) {
     vec2_t projected_point = {
@@ -74,7 +73,7 @@ void update(void) {
 
     previous_frame_time = SDL_GetTicks();
 
-    // Initialise the aarray of triangles to render
+    // Initialise the array of triangles to render
     triangles_to_render = NULL;
 
     mesh.rotation.x += 0.01;
