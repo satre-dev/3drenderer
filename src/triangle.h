@@ -1,7 +1,7 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
 #include "vector.h"
-#include <_types/_uint32_t.h>
+#include <stdint.h>
 
 typedef struct {
     int a;
