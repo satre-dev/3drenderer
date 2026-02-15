@@ -1,7 +1,7 @@
 #include "triangle.h"
 #include "display.h"
-#include <__stddef_null.h>
-#include <_types/_uint32_t.h>
+#include <stddef.h>
+#include <stdint.h>
 
 void int_swap(int* a, int* b){
     int tmp = *a;
